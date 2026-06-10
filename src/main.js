@@ -28,6 +28,10 @@ addTaskBtn.addEventListener('click', () => {
     const taskItem = document.createElement('li');
     taskItem.textContent = taskText;
 
+    taskItem.addEventListener('click', () => {
+        taskItem.classList.toggle('completed');
+    });
+
     taskList.appendChild(taskItem);
     taskInput.value = '';
 });
